@@ -2,16 +2,16 @@
   "defaultEnv": "local",
   "local": {
     "driver": "mysql",
-    "user": "<username>",
-    "password": "<password>",
-    "host": "localhost",
+    "user": "root",
+    "password": "password",
+    "host": "127.0.0.1",
     "database": "migrations",
     "multipleStatements": true
   },
   "live": {
     "driver": "mysql",
-    "user": "<username>",
-    "password": "<password>",
+    "user": "nate",
+    "password": "password",
     "host": "<live db host>",
     "database": "migrations",
     "multipleStatements": true

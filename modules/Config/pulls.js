@@ -1,8 +1,8 @@
 
 const public = {
   ttl: {
-    amount: 6,
-    units: 'hours'
+    amount: 10,
+    units: 'minutes'
   }
 };
 

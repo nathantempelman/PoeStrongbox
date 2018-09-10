@@ -233,6 +233,7 @@
         profit: ((curr.finalCount / _rad.investAmount) * 100).toFixed(2) + '%',
         finalRatio: curr.finalRatio
       }
+      // n: switch url on buy/sell so you know where to place your listing
       while (curr) {
         if (curr.prev) {
           result.chain.splice(0, 0, {
@@ -243,7 +244,7 @@
             finalRatio: curr.finalRatio,
             cleanRatio: ToRatio(curr.prev.finalCount, curr.finalCount),
             sell: curr.sell,
-            url: PoeTradeUrl(_rad.league, curr.ratio.from, curr.ratio.to)
+            url: PoeTradeUrl(_rad.league, curr.ratio.to, curr.ratio.from)
           });
           if (curr.ratio.sellers < _rad.minSellers) {
             console.log(curr);
