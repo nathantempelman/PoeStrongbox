@@ -30,7 +30,6 @@ gulp.task('concat-app', function () {
     //the angular app
     './client_src/app/app.js',
     './client_src/app/md-theme.js',
-    './client_src/app/check-domain.js',
     //directives
     './client_src/app/**/*.dir.js',
     //controllers
