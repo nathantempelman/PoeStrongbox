@@ -10,11 +10,12 @@ This is now on github because I wrote it when I was bored after work and wanted 
 
 1: Go to ~/database.json and set up your local/live databases.
 
-* Your databases MUST include a table called 'migrations'.
+* Your databases MUST include a database called 'migrations'.
 
 2: Install npm packages
 
 * cd to root of project
+* ~: npm install gulp db-migrate -g
 * ~: npm install
 * ~: db-migrate up
 
@@ -23,6 +24,15 @@ This is now on github because I wrote it when I was bored after work and wanted 
 * ~: gulp app
 
 4: Go into the 'leagues' database table and add the league you want to scan. The name of the league must match the league name in the query string used to fetch the data from poe.trade
+
+---
+
+**CREATING NEW MIGRATIONS**
+
+* ~: db-migrate <camelCaseMigrationName> --sql-file
+
+Modify the produced up SQL to implement the schema changes.
+Modify the produced down SQL to reverse the schema changes.
 
 ---
 

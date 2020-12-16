@@ -58,7 +58,6 @@
     GetPull();
 
     function SaveSearch(pull, from, to, minSellers, amount) {
-      console.log('saving search', arguments);
       var postData = null;
       try {
         postData = {
@@ -70,7 +69,6 @@
           amount: amount || 0
         }
       } catch (e) {
-        console.log(e);
         return;
       }
 
@@ -246,9 +244,6 @@
             sell: curr.sell,
             url: PoeTradeUrl(_rad.league, curr.ratio.to, curr.ratio.from)
           });
-          if (curr.ratio.sellers < _rad.minSellers) {
-            console.log(curr);
-          }
         }
         curr = curr.prev;
       }
@@ -262,8 +257,6 @@
     }
 
     function ShowMore() {
-      console.log('all: ', _rad.allResults);
-      console.log('more: ', _rad.allResults.slice(_rad.results.length, _rad.results.length + maxResults));
       _rad.results = _rad.results.concat(_rad.allResults.slice(_rad.results.length, _rad.results.length + maxResults));
     }
 
