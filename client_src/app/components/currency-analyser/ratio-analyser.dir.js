@@ -35,7 +35,7 @@
       benchmarkRatio: null,
       investing: null,
       exiting: null,
-      investAmount: 100,
+      investAmount: 500,
       results: [],
       allResults: [],
       bestResult: null,
@@ -242,7 +242,7 @@
             finalRatio: curr.finalRatio,
             cleanRatio: ToRatio(curr.prev.finalCount, curr.finalCount),
             sell: curr.sell,
-            url: PoeTradeUrl(_rad.league, curr.ratio.to, curr.ratio.from)
+            url: PoeTradeUrl(_rad.league, curr.ratio.from, curr.ratio.to)
           });
         }
         curr = curr.prev;
